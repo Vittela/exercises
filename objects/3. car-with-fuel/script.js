@@ -29,7 +29,6 @@ Car.prototype.move = function (direction) {
     this.coordinates.y -= this.speed;
   }
 
-  this.fuel -= this.speed
   console.log(`New ${this.name} coordinates: (${this.coordinates.x}, ${this.coordinates.y})`)
   
   return (`Fuel: ${this.fuel -= this.speed}L`)
