@@ -1,15 +1,19 @@
-const userNumber = prompt("Write a number");
-let counter = 0
+const howMuchNumbers = prompt("Write a number");
 
-console.log(`${userNumber} is prime? ${isPrime(userNumber)}`)
+for (i = 1; i <= howMuchNumbers; i++) {
+  if (isPrime(i)) { console.log(`${i} is prime`) }
+}
+
 
 function isPrime(number) {
-  for (i = 1; i <= number; i++) {
-    if ((number % i) === 0) {
+  let counter = 0
+
+  for (a = 1; a <= number; a++) {
+    if ((number % a) === 0) {
       counter += 1;
     }
   }
 
-  if (counter > 2)  { return false; }
-  else              { return true;  }
+  if (counter > 2) { return false; }
+  else { return true; }
 }
